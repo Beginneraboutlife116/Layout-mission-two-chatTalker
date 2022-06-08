@@ -1,9 +1,7 @@
-@use '../abstract/variables' as *;
-
 .text {
-  @each $val in $font-size-type {
-    &_#{$val} {
-      font-size: var(--fz-#{$val});
+  @for $i from 1 through 12 {
+    &_#{$i} {
+      font-size: var(--fz-#{$i})
     }
   }
 

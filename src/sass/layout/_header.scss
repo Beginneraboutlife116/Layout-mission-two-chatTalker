@@ -8,7 +8,7 @@
   }
 
   &__logo {
-    width: 39.06%;
+    inline-size: 39.06%;
     object-fit: contain;
   }
 
@@ -24,16 +24,20 @@
   }
 
   &__content {
-    line-height: 1.5;
     padding-block: var(--space-8);
   }
 
   &__title {
     color: var(--clr-primary);
+    margin-block-end: var(--space-2)
+  }
+
+  &__paragraph {
+    margin-block-end: var(--space-4)
   }
 
   &__img {
-    width: 90.84%;
+    inline-size: 90.84%;
     margin-inline: auto;
 
     &-wrapper {

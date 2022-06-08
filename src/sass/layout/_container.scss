@@ -1,7 +1,7 @@
 .container {
-  width: min(100% - var(--space-10), 68rem);
+  inline-size: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
-  
+
   &_relative {
     position: relative;
   }

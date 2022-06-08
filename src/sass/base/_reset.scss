@@ -16,7 +16,8 @@ html, body {
 }
 body {
   /* line-height: calc(2px + 2ex + 2px); */
-  line-height: calc(1em + 0.5rem);
+  // line-height: calc(1em + 0.5rem);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
 }
