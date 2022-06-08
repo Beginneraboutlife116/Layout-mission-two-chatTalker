@@ -1,0 +1,13 @@
+@use '../abstract/variables' as *;
+
+.text {
+  @each $val in $font-size-type {
+    &_#{$val} {
+      font-size: var(--fz-#{$val});
+    }
+  }
+
+  &_bold {
+    font-weight: 700;
+  }
+}

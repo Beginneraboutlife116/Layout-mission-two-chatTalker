@@ -8,7 +8,7 @@
   --clr-shadow: hsla(0, 0%, 0%, 0.078);
   --clr-card-border: hsla(0, 0%, 0%, 0.161);
   --clr-footer: hsl(0, 0%, 96%);
-  --clr-plan: hsl(4, 100%, 66%);
+  --clr-to-plan: hsl(4, 100%, 66%);
   --clr-plan-header: hsl(220, 60%, 98%);
   --clr-scroll-bar: hsl(44, 100%, 66%);
   --clr-star: hsl(44, 89%, 64%);
@@ -22,6 +22,12 @@
 
   --ff-comfortaa: Comfortaa, sans-serif;
   --ff-wendy: 'Wendy One', sans-serif;
+
+  --space: 1rem;
+  
+  @for $i from 1 through 12 {
+    --space-#{$i}: calc(var(--space) * #{$i * 0.25});
+  }
 }
 
 body {

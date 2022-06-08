@@ -14,7 +14,7 @@
     <title>homepage - chatTalker</title>
   </head>
   <body>
-    <button class="btn btn__back-top" aria-label="Back to top">
+    <button class="btn btn_back-top" aria-label="Back to top">
       <svg
         id="top"
         xmlns="http://www.w3.org/2000/svg"
@@ -43,20 +43,30 @@
       </svg>
     </button>
     <header class="header">
-      <div class="header__header">
-        <img
-          src="./src/asset/img/logo.png"
-          alt="chatTalker logo"
-          class="logo"
-        />
-        <a href="./plan.html" class="btn btn_red">方案費用</a>
+      <div class="header_border_bottom">
+        <div class="header__header container">
+          <img
+            src="./src/asset/img/logo.png"
+            alt="chatTalker logo"
+            class="header__logo"
+          />
+          <a href="./plan.html" class="btn header__btn">方案費用</a>
+        </div>
       </div>
-      <section class="header__content">
-        <h1>ChatTalker 最全面的聊天機器人</h1>
-        <p>你愛我像誰？扮演什麼角色我都會</p>
-        <p>Facebook、Instagram、LINE 聊天機器人解決方案</p>
-        <img src="./src/asset/img/index/img-home.png" alt="chatTalker image" />
-      </section>
+      <div class="container">
+        <section class="header__content">
+          <h1 class="header__title text_sm">ChatTalker 最全面的聊天機器人</h1>
+          <p class="text_xl text_bold">你愛我像誰？<br />扮演什麼角色我都會</p>
+          <p class="text_sm">Facebook、Instagram、LINE 聊天機器人解決方案</p>
+        </section>
+        <div class="header__img-wrapper">
+          <img
+            class="header__img"
+            src="./src/asset/img/index/img-home.png"
+            alt="chatTalker image"
+          />
+        </div>
+      </div>
     </header>
     <section>
       <h2>三大平台，我來搞定</h2>

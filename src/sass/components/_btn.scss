@@ -1,0 +1,16 @@
+.btn {
+  border-radius: 99em;
+
+  &_back-top {
+    width: 13.33%;
+    display: flex;
+    border-radius: 50%;
+    position: fixed;
+    inset: auto clamp(var(--space-4), 4vw, var(--space-12)) 12vh auto;
+  }
+
+  &_primary {
+    padding: var(--space-3) var(--space-8);
+    background-color: var(--clr-primary);
+  }
+}

@@ -1,0 +1,47 @@
+.header {
+  
+  &__header {
+    padding-block: var(--space-4);
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__logo {
+    width: 39.06%;
+    object-fit: contain;
+  }
+
+  &_border_bottom {
+    border-bottom: 2px solid #FFD153;
+  }
+
+  &__btn {
+    padding: var(--space-2) var(--space-8);
+    background-color: var(--clr-to-plan);
+    font-size: var(--fz-sm);
+    color: white;
+  }
+
+  &__content {
+    line-height: 1.5;
+    padding-block: var(--space-8);
+  }
+
+  &__title {
+    color: var(--clr-primary);
+  }
+
+  &__img {
+    width: 90.84%;
+    margin-inline: auto;
+
+    &-wrapper {
+      padding-block-end: var(--space-2);
+      margin-block-end: var(--space-8);
+      background-image: url(/src/asset/img/index/bg-yellow-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
+}
