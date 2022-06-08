@@ -67,5 +67,52 @@ p, h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --clr-font: hsl(345, 6%, 13%);
+  --clr-font-lighter: hsl(0, 0%, 45%);
+  --clr-primary: hsl(181, 49%, 55%);
+  --clr-others: hsl(0, 0%, 87%);
+  --clr-shadow: hsla(0, 0%, 0%, 0.078);
+  --clr-card-border: hsla(0, 0%, 0%, 0.161);
+  --clr-footer: hsl(0, 0%, 96%);
+  --clr-plan: hsl(4, 100%, 66%);
+  --clr-plan-header: hsl(220, 60%, 98%);
+  --clr-scroll-bar: hsl(44, 100%, 66%);
+  --clr-star: hsl(44, 89%, 64%);
+  --fz-primary: calc(var(--fz-sm) * 1.125);
+  --fz-sm: 1rem;
+  --fz-md: calc(var(--fz-sm) * 1.25);
+  --fz-lg: calc(var(--fz-sm) * 1.5);
+  --fz-xl: calc(var(--fz-sm) * 2);
+  --fz-xxl: calc(var(--fz-sm) * 3);
+  --ff-comfortaa: Comfortaa, sans-serif;
+  --ff-wendy: "Wendy One", sans-serif;
+}
+
+body {
+  color: var(--clr-font);
+  font-size: var(--fz-primary);
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:where(:active, :visited, :link) {
+  color: inherit;
+}
 
 /*# sourceMappingURL=style.css.map */
