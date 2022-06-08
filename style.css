@@ -30,6 +30,10 @@ ol[role=list] {
   list-style: none;
 }
 
+li {
+  display: inline-block;
+}
+
 a:not([class]) {
   text-decoration-skip-ink: all;
 }
@@ -109,7 +113,6 @@ body {
 }
 
 ul {
-  list-style-type: none;
   padding-inline-start: 0;
 }
 
@@ -151,6 +154,9 @@ a:where(:active, :visited, :link) {
   width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
 }
+.container_relative {
+  position: relative;
+}
 
 .header__header {
   padding-block: var(--space-4);
@@ -187,6 +193,10 @@ a:where(:active, :visited, :link) {
   background-image: url(/src/asset/img/index/bg-yellow-mobile.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
+}
+
+.content {
+  padding-block-start: calc(var(--space) * 3.75);
 }
 
 .btn {

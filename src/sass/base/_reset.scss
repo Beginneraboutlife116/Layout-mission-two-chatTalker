@@ -24,6 +24,9 @@ ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
+li {
+  display: inline-block;
+}
 a:not([class]) {
   text-decoration-skip-ink: all;
 }
