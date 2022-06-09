@@ -1,0 +1,11 @@
+.card {
+  border-radius: var(--space-3);
+  box-shadow: 0px 2px 10px 0 var(--clr-shadow);
+  &_md {
+    inline-size: 77.61%;
+
+    & > p {
+      padding: 0 var(--space-4) var(--space-6);
+    }
+  }
+}
