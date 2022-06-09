@@ -1,10 +1,10 @@
 .container {
-  inline-size: min(100% - var(--space-10), 68rem);
+  width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
 
   &_relative {
     position: relative;
-    overflow-inline: hidden;
+    overflow-x: hidden;
     padding-block-end: var(--space-8);
 
     &::before,
@@ -17,14 +17,14 @@
 
     &::before {
       background-color: hsl(181, 49%, 55%);
-      inline-size: 33.6%;
+      width: 33.6%;
       top: 75px;
       left: -77px;
     }
 
     &::after {
       background-color: hsl(181, 49%, 81%);
-      inline-size: 36%;
+      width: 36%;
       right: -47px;
       bottom: 0;
       z-index: -1;

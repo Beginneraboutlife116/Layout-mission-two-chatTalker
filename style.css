@@ -765,12 +765,12 @@ a:where(:active, :visited, :link) {
 }
 
 .container {
-  inline-size: min(100% - var(--space-10), 68rem);
+  width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
 }
 .container_relative {
   position: relative;
-  overflow-inline: hidden;
+  overflow-x: hidden;
   padding-block-end: var(--space-8);
 }
 .container_relative::before, .container_relative::after {
@@ -781,13 +781,13 @@ a:where(:active, :visited, :link) {
 }
 .container_relative::before {
   background-color: hsl(181deg, 49%, 55%);
-  inline-size: 33.6%;
+  width: 33.6%;
   top: 75px;
   left: -77px;
 }
 .container_relative::after {
   background-color: hsl(181deg, 49%, 81%);
-  inline-size: 36%;
+  width: 36%;
   right: -47px;
   bottom: 0;
   z-index: -1;
@@ -799,7 +799,7 @@ a:where(:active, :visited, :link) {
   justify-content: space-between;
 }
 .header__logo {
-  inline-size: 39.06%;
+  width: 39.06%;
   object-fit: contain;
 }
 .header_border_bottom {
@@ -818,7 +818,7 @@ a:where(:active, :visited, :link) {
   margin-block-end: var(--space-4);
 }
 .header__img {
-  inline-size: 90.84%;
+  width: 90.84%;
   margin-inline: auto;
 }
 .header__img-wrapper {
@@ -843,7 +843,7 @@ a:where(:active, :visited, :link) {
   align-items: center;
 }
 .content__item {
-  inline-size: 68.06%;
+  width: 68.06%;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -855,7 +855,7 @@ a:where(:active, :visited, :link) {
   line-height: 1;
 }
 .btn_back-top {
-  inline-size: 13.33%;
+  width: 13.33%;
   display: flex;
   border-radius: 50%;
   position: fixed;
@@ -872,7 +872,7 @@ a:where(:active, :visited, :link) {
   margin-inline: auto;
 }
 .pic_sm {
-  inline-size: 26.32%;
+  width: 26.32%;
 }
 
 .card {
@@ -880,7 +880,7 @@ a:where(:active, :visited, :link) {
   box-shadow: 0px 2px 10px 0 var(--clr-shadow);
 }
 .card_sm {
-  inline-size: 68.66%;
+  width: 68.66%;
   display: flex;
   flex-direction: column;
   padding-block: var(--space-8) var(--space-12);
@@ -889,7 +889,7 @@ a:where(:active, :visited, :link) {
   gap: var(--space-5);
 }
 .card_md {
-  inline-size: 77.61%;
+  width: 77.61%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -912,7 +912,7 @@ a:where(:active, :visited, :link) {
   margin-block: var(--space-4) var(--space-1);
 }
 .card__avatar {
-  inline-size: 34.12%;
+  width: 34.12%;
   position: absolute;
   top: -4rem;
   left: 1rem;
@@ -925,22 +925,38 @@ a:where(:active, :visited, :link) {
 }
 
 .icon {
-  inline-size: 37.39%;
+  width: 37.39%;
   aspect-ratio: 1;
   border-radius: 50%;
   box-shadow: 0px 2px 10px 0 var(--clr-shadow);
   display: flex;
 }
 .icon > svg {
-  inline-size: 60.47%;
+  width: 60.47%;
   margin: auto;
 }
 
 .stars {
-  inline-size: 43.05%;
+  width: 43.05%;
   display: flex;
   gap: var(--space-2);
   align-items: center;
+}
+
+.horizontal-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  padding-inline: var(--space-5);
+  padding-block-end: var(--space-6);
+  gap: var(--space-5);
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  scroll-padding-inline: var(--space-5);
+  scroll-snap-type: inline mandatory;
+}
+.horizontal-scroller__item {
+  scroll-snap-align: start;
 }
 
 /*# sourceMappingURL=style.css.map */
