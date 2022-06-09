@@ -9,6 +9,7 @@
     border-radius: 50%;
     position: fixed;
     inset: auto clamp(var(--space-4), 4vw, var(--space-12)) 12vh auto;
+    z-index: 1;
   }
 
   &_primary {
