@@ -1,10 +1,8 @@
 .content {
-  // clamp
   padding-block-start: calc(var(--space) * 3.75);
-  text-align: center;
 
-  &__paragraph {
-    margin-block-start: var(--space-4);
+  &__title {
+    margin-block-end: var(--space-4);
   }
 
   &__list {

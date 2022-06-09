@@ -1,24 +1,24 @@
 @use '../abstract/variables' as *;
 
 @each $key, $val in $direction {
-  @for $i from 1 through 4 {
+  @for $i from 1 through 12 {
     .m#{$key}_#{$i} {
-      margin-#{$val}: var(--space-#{$i * 2});
+      margin-#{$val}: var(--space-#{$i});
     }
     .p#{$key}_#{$i} {
-      padding-#{$val}: var(--space-#{$i * 2});
+      padding-#{$val}: var(--space-#{$i});
     }
   }
-  .m#{$key}_5 {
-    margin-#{$val}: calc(var(--space) * 3.75);
-  }
-  .m#{$key}_6 {
-    margin-#{$val}: calc(var(--space) * 6.25);
-  }
-  .p#{$key}_5 {
-    padding-#{$val}: calc(var(--space) * 3.75);
-  }
-  .p#{$key}_6 {
-    padding-#{$val}: calc(var(--space) * 6.25);
-  }
+  // .m#{$key}_5 {
+  //   margin-#{$val}: calc(var(--space) * 3.75);
+  // }
+  // .m#{$key}_6 {
+  //   margin-#{$val}: calc(var(--space) * 6.25);
+  // }
+  // .p#{$key}_5 {
+  //   padding-#{$val}: calc(var(--space) * 3.75);
+  // }
+  // .p#{$key}_6 {
+  //   padding-#{$val}: calc(var(--space) * 6.25);
+  // }
 }

@@ -1,4 +1,6 @@
 .text {
+  font-size: 1.125rem;
+
   @for $i from 1 through 12 {
     &_#{$i} {
       font-size: var(--fz-#{$i})
@@ -11,5 +13,9 @@
 
   &_clr_primary {
     color: var(--clr-primary);
+  }
+
+  &_clr_white {
+    color: white;
   }
 }

@@ -17,22 +17,17 @@
   }
 
   &__btn {
-    padding: var(--space-2) var(--space-8);
     background-color: var(--clr-to-plan);
-    font-size: var(--fz-sm);
-    color: white;
+    padding: var(--space-3) var(--space-8);
   }
 
   &__content {
     padding-block: var(--space-8);
+    text-align: left;
   }
-
-  &__title {
-    color: var(--clr-primary);
-    margin-block-end: var(--space-2)
-  }
-
+  
   &__paragraph {
+    margin-block-start: var(--space-2);
     margin-block-end: var(--space-4)
   }
 

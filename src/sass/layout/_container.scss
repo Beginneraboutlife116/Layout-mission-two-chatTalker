@@ -4,5 +4,30 @@
 
   &_relative {
     position: relative;
+    overflow-inline: hidden;
+    padding-block-end: var(--space-8);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    &::before {
+      background-color: hsl(181, 49%, 55%);
+      inline-size: 33.6%;
+      top: 75px;
+      left: -77px;
+    }
+
+    &::after {
+      background-color: hsl(181, 49%, 81%);
+      inline-size: 36%;
+      right: -47px;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 }
