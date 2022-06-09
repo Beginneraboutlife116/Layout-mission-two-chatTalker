@@ -849,6 +849,29 @@ a:where(:active, :visited, :link) {
   gap: var(--space-4);
 }
 
+.footer {
+  background-image: url(/src/asset/img/index/bg-footer-mobile.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: grid;
+  margin-block-start: calc(var(--space) * 3.75);
+}
+.footer__content {
+  margin-block-start: auto;
+}
+.footer__content > h2 {
+  margin-block-end: var(--space-6);
+}
+.footer__content > a {
+  margin-block-end: calc(var(--space) * 3.75);
+}
+.footer__copyright {
+  background-color: var(--clr-footer);
+  padding-block: var(--space-4);
+}
+
 .btn {
   border-radius: 99em;
   display: inline-block;
