@@ -1,0 +1,16 @@
+// for media query
+@mixin above-600px {
+  @media (min-width: 37.5rem) {
+    @content;
+  }
+}
+@mixin above-800px {
+  @media (min-width: 50rem) {
+    @content;
+  }
+}
+@mixin above-1104px {
+  @media (min-width: 69rem) {
+    @content;
+  }
+}

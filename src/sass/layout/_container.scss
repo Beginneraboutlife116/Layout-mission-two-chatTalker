@@ -1,6 +1,16 @@
+@use '../abstract/mixins' as *;
+
 .container {
   width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
+
+  @include above-600px {
+    padding-inline: var(--space-4);
+  }
+
+  @include above-1104px {
+    padding-inline: 0rem;
+  }
 
   &_relative {
     position: relative;

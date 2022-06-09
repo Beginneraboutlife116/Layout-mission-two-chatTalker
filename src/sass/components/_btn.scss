@@ -3,8 +3,12 @@
   display: inline-block;
   line-height: 1;
 
+  &:hover {
+    opacity: 0.75;
+  }
+
   &_back-top {
-    width: 13.33%;
+    width: min(13.33%, 4.4375rem);
     display: flex;
     border-radius: 50%;
     position: fixed;

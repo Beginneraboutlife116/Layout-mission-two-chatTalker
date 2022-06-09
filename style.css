@@ -768,6 +768,16 @@ a:where(:active, :visited, :link) {
   width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
 }
+@media (min-width: 37.5rem) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+@media (min-width: 69rem) {
+  .container {
+    padding-inline: 0rem;
+  }
+}
 .container_relative {
   position: relative;
   overflow-x: hidden;
@@ -794,12 +804,15 @@ a:where(:active, :visited, :link) {
 }
 
 .header__header {
-  padding-block: var(--space-4);
+  padding-block: clamp(var(--space-4), 4vmin, var(--space-6));
   display: flex;
   justify-content: space-between;
 }
+.header__title {
+  font-size: clamp(var(--fz-4), 2.8vw, 1.125rem);
+}
 .header__logo {
-  width: 39.06%;
+  width: min(39.06%, 13.62875rem);
   object-fit: contain;
 }
 .header_border_bottom {
@@ -809,24 +822,58 @@ a:where(:active, :visited, :link) {
   background-color: var(--clr-to-plan);
   padding: var(--space-3) var(--space-8);
 }
-.header__content {
-  padding-block: var(--space-8);
+.header__main {
   text-align: left;
 }
 .header__paragraph {
-  margin-block-start: var(--space-2);
-  margin-block-end: var(--space-4);
+  font-size: var(--fz-8);
+}
+.header__paragraph + p {
+  font-size: var(--fz-4);
 }
 .header__img {
   width: 90.84%;
+  width: min(90.84%, 33.25rem);
   margin-inline: auto;
 }
 .header__img-wrapper {
-  padding-block-end: var(--space-2);
-  margin-block-end: var(--space-8);
+  margin-block-end: max(var(--space-8), 8.5vmin);
   background-image: url(/src/asset/img/index/bg-yellow-mobile.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-size: contain;
+}
+@media (min-width: 50rem) {
+  .header {
+    background-image: url(/src/asset/img/index/bg-yellow.png);
+    background-repeat: no-repeat;
+    background-size: 62% 100%;
+    background-position: right;
+  }
+  .header_border_bottom {
+    border-bottom: none;
+  }
+  .header__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__img {
+    margin-inline-end: 0;
+  }
+  .header__img-wrapper {
+    flex: 1;
+    background-image: none;
+    margin-block-end: min(8.5vmax, 6.75rem);
+  }
+}
+@media (min-width: 69rem) {
+  .header__paragraph {
+    font-size: var(--fz-12);
+  }
+  .header__paragraph + p {
+    font-size: var(--fz-5);
+  }
 }
 
 .content {
@@ -877,8 +924,11 @@ a:where(:active, :visited, :link) {
   display: inline-block;
   line-height: 1;
 }
+.btn:hover {
+  opacity: 0.75;
+}
 .btn_back-top {
-  width: 13.33%;
+  width: min(13.33%, 4.4375rem);
   display: flex;
   border-radius: 50%;
   position: fixed;
