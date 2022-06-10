@@ -1,16 +1,28 @@
+@use '../abstract/mixins' as *;
+
 .content {
-  padding-block-start: calc(var(--space) * 3.75);
+  padding-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
 
   &__title {
     margin-block-end: var(--space-4);
   }
 
   &__list {
-    margin-block-start: var(--space-8);
+    margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
     align-items: center;
+
+    @include above-800px {
+      flex-flow: row wrap;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    @include above-1104px {
+      gap: var(--space-4);
+    }
   }
 
   &__item {

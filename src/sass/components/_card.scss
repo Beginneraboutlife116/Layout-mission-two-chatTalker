@@ -1,3 +1,5 @@
+@use '../abstract/mixins' as *;
+
 .card {
   border-radius: var(--space-3);
   box-shadow: 0px 2px 10px 0 var(--clr-shadow);
@@ -13,7 +15,7 @@
   }
 
   &_md {
-    width: 77.61%;
+    width: min(77.61%, 25rem);
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -21,6 +23,11 @@
 
     & > p {
       padding: 0 var(--space-4) var(--space-6);
+    }
+
+    @include above-1104px {
+      max-width: 16.25rem;
+      width: min(20vw, 16.25rem);
     }
   }
 

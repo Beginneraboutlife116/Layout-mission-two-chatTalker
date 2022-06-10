@@ -73,7 +73,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 :root {
   --clr-font: hsl(345, 6%, 13%);
-  --clr-font-lighter: hsl(0, 0%, 45%);
+  --clr-font-gray: hsl(0, 0%, 45%);
   --clr-primary: hsl(181, 49%, 55%);
   --clr-others: hsl(0, 0%, 87%);
   --clr-shadow: hsla(0, 0%, 0%, 0.078);
@@ -186,6 +186,9 @@ a:where(:active, :visited, :link) {
 }
 .text_clr_white {
   color: white;
+}
+.text_clr_gray {
+  color: hsl(0deg, 0%, 45%);
 }
 
 .mt_1 {
@@ -877,17 +880,29 @@ a:where(:active, :visited, :link) {
 }
 
 .content {
-  padding-block-start: calc(var(--space) * 3.75);
+  padding-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
 }
 .content__title {
   margin-block-end: var(--space-4);
 }
 .content__list {
-  margin-block-start: var(--space-8);
+  margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
   align-items: center;
+}
+@media (min-width: 50rem) {
+  .content__list {
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+@media (min-width: 69rem) {
+  .content__list {
+    gap: var(--space-4);
+  }
 }
 .content__item {
   width: 68.06%;
@@ -899,7 +914,7 @@ a:where(:active, :visited, :link) {
 .footer {
   background-image: url(/src/asset/img/index/bg-footer-mobile.png);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 70vh;
   display: grid;
@@ -962,7 +977,7 @@ a:where(:active, :visited, :link) {
   gap: var(--space-5);
 }
 .card_md {
-  width: 77.61%;
+  width: min(77.61%, 25rem);
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -970,6 +985,12 @@ a:where(:active, :visited, :link) {
 }
 .card_md > p {
   padding: 0 var(--space-4) var(--space-6);
+}
+@media (min-width: 69rem) {
+  .card_md {
+    max-width: 16.25rem;
+    width: min(20vw, 16.25rem);
+  }
 }
 .card_lg {
   margin-top: 56px;
