@@ -785,29 +785,43 @@ a:where(:active, :visited, :link) {
     padding-inline: 0rem;
   }
 }
-.container_relative {
+.container__circles-style {
   position: relative;
-  overflow-x: hidden;
-  padding-block-end: var(--space-8);
 }
-.container_relative::before, .container_relative::after {
+.container__circles-style::before, .container__circles-style::after {
   content: "";
   position: absolute;
+}
+.container__circles-style::before {
   aspect-ratio: 1;
-  border-radius: 50%;
-}
-.container_relative::before {
+  transform: translate(-50%, -50%);
   background-color: hsl(181deg, 49%, 55%);
-  width: 33.6%;
-  top: 75px;
-  left: -77px;
+  width: min(33.6%, 22.5rem);
+  border-radius: 50%;
+  top: 8.625rem;
+  left: -0.875rem;
+  transition: top 500ms ease, left 500ms ease;
 }
-.container_relative::after {
-  background-color: hsl(181deg, 49%, 81%);
-  width: 36%;
-  right: -47px;
-  bottom: 0;
+@media (min-width: 50rem) {
+  .container__circles-style::before {
+    top: 0;
+    left: -2.625rem;
+  }
+}
+.container__circles-style::after {
+  background-image: url(/src/asset/img/index/ball-02.svg);
+  width: clamp(5.5rem, 19vw, 13.125rem);
+  aspect-ratio: 88/135;
+  background-position: left;
+  background-size: cover;
+  right: 0;
+  bottom: -2rem;
   z-index: -1;
+}
+@media (min-width: 69rem) {
+  .container__circles-style::after {
+    bottom: -12rem;
+  }
 }
 
 .header__header {
@@ -893,17 +907,22 @@ a:where(:active, :visited, :link) {
 @media (min-width: 50rem) {
   .list {
     flex-flow: row wrap;
-    align-items: stretch;
   }
 }
 
 @media (min-width: 50rem) {
-  .card__list_md {
+  .card__list-social-media {
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 50rem) {
+  .card__list-md {
     justify-content: center;
+    align-items: stretch;
   }
 }
 @media (min-width: 69rem) {
-  .card__list_md {
+  .card__list-md {
     gap: var(--space-4);
   }
 }
@@ -969,6 +988,11 @@ a:where(:active, :visited, :link) {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+}
+@media (min-width: 50rem) {
+  .card__social-media {
+    width: 15rem;
+  }
 }
 .card_sm {
   width: 68.66%;

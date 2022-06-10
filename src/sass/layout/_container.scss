@@ -12,32 +12,44 @@
     padding-inline: 0rem;
   }
 
-  &_relative {
+  &__circles-style {
     position: relative;
-    overflow-x: hidden;
-    padding-block-end: var(--space-8);
 
     &::before,
     &::after {
       content: '';
       position: absolute;
-      aspect-ratio: 1;
-      border-radius: 50%;
     }
-
+    
     &::before {
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
       background-color: hsl(181, 49%, 55%);
-      width: 33.6%;
-      top: 75px;
-      left: -77px;
+      width: min(33.6%, 22.5rem);
+      border-radius: 50%;
+      top: 8.625rem;
+      left: -0.875rem;
+      transition: top 500ms ease, left 500ms ease;
+      
+      @include above-800px {
+        top: 0;
+        left: -2.625rem;
+      }
     }
 
     &::after {
-      background-color: hsl(181, 49%, 81%);
-      width: 36%;
-      right: -47px;
-      bottom: 0;
+      background-image: url(/src/asset/img/index/ball-02.svg);
+      width: clamp(5.5rem, 19vw, 13.125rem);
+      aspect-ratio: 88 / 135;
+      background-position: left;
+      background-size: cover;
+      right: 0;
+      bottom: -2rem;
       z-index: -1;
+
+      @include above-1104px {
+        bottom: -12rem;
+      }
     }
   }
 }

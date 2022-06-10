@@ -9,14 +9,19 @@
 
   @include above-800px {
     flex-flow: row wrap;
-    align-items: stretch;
   }
 }
 
 .card__list {
-  &_md {
-     @include above-800px {
+  &-social-media {
+    @include above-800px {
+      justify-content: space-evenly;
+    }
+  }
+  &-md {
+    @include above-800px {
       justify-content: center;
+      align-items: stretch;
     }
 
     @include above-1104px {
