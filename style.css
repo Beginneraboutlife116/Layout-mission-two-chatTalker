@@ -771,6 +771,10 @@ a:where(:active, :visited, :link) {
   padding-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
 }
 
+.mt_32to48 {
+  margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
+}
+
 .container {
   width: min(100% - var(--space-10), 68rem);
   margin-inline: auto;
@@ -898,32 +902,96 @@ a:where(:active, :visited, :link) {
 }
 
 .list {
-  margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   gap: var(--space-6);
-  align-items: center;
-}
-@media (min-width: 50rem) {
-  .list {
-    flex-flow: row wrap;
-  }
 }
 
+.social-media__list {
+  gap: var(--space-6);
+}
 @media (min-width: 50rem) {
-  .card__list-social-media {
+  .social-media__list {
     justify-content: space-evenly;
   }
 }
+.social-media__item {
+  width: 68.06%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
 @media (min-width: 50rem) {
-  .card__list-md {
-    justify-content: center;
-    align-items: stretch;
+  .social-media__item {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 69rem) {
+  .info__list {
+    gap: var(--space-4);
+  }
+}
+.info__item {
+  width: min(77.61%, 24rem);
+  gap: var(--space-4);
+}
+.info__item > p {
+  padding: 0 var(--space-4) var(--space-6);
+}
+@media (min-width: 69rem) {
+  .info__item {
+    width: min(20vw, 16.25rem);
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product__list {
+  margin-block-start: var(--space-8);
+  display: grid;
+  grid-template-columns: minmax(100%, 14.375rem);
+  justify-content: stretch;
+  gap: var(--space-6);
+}
+.product__item {
+  padding-block: var(--space-8) var(--space-12);
+  padding-inline: var(--space-6) var(--space-10);
+  text-align: left;
+  gap: var(--space-5);
+}
+@media (min-width: 37.5rem) {
+  .product__list {
+    grid-template-columns: repeat(2, minmax(14.375rem, 18.75rem));
+  }
+}
+@media (min-width: 50rem) {
+  .product__list {
+    gap: var(--space-7) clamp(var(--space-6), 3.5vw, var(--space-12));
   }
 }
 @media (min-width: 69rem) {
-  .card__list-md {
-    gap: var(--space-4);
+  .product {
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(var(--space-12), 12vw, 8.75rem);
+  }
+  .product__list {
+    grid-template-columns: repeat(2, 14.375rem);
+  }
+  .product__content {
+    order: 1;
+    text-align: left;
+  }
+}
+@media (min-width: 85.375rem) {
+  .product {
+    justify-content: start;
   }
 }
 
@@ -982,41 +1050,9 @@ a:where(:active, :visited, :link) {
 .card {
   border-radius: var(--space-3);
   box-shadow: 0px 2px 10px 0 var(--clr-shadow);
-}
-.card__social-media {
-  width: 68.06%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-@media (min-width: 50rem) {
-  .card__social-media {
-    width: 15rem;
-  }
-}
-.card_sm {
-  width: 68.66%;
-  display: flex;
-  flex-direction: column;
-  padding-block: var(--space-8) var(--space-12);
-  padding-inline: var(--space-6) var(--space-10);
-  text-align: left;
-  gap: var(--space-5);
-}
-.card_md {
-  width: min(77.61%, 24rem);
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
-  gap: var(--space-4);
-}
-.card_md > p {
-  padding: 0 var(--space-4) var(--space-6);
-}
-@media (min-width: 69rem) {
-  .card_md {
-    width: min(20vw, 16.25rem);
-  }
+  display: flex;
+  flex-direction: column;
 }
 .card_lg {
   margin-top: 56px;
@@ -1045,7 +1081,7 @@ a:where(:active, :visited, :link) {
 }
 
 .icon {
-  width: 37.39%;
+  width: 51.81%;
   aspect-ratio: 1;
   border-radius: 50%;
   box-shadow: 0px 2px 10px 0 var(--clr-shadow);

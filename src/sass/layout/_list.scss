@@ -1,31 +1,9 @@
 @use '../abstract/mixins' as *;
 
 .list {
-  margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   gap: var(--space-6);
-  align-items: center;
-
-  @include above-800px {
-    flex-flow: row wrap;
-  }
-}
-
-.card__list {
-  &-social-media {
-    @include above-800px {
-      justify-content: space-evenly;
-    }
-  }
-  &-md {
-    @include above-800px {
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    @include above-1104px {
-      gap: var(--space-4);
-    }
-  }
 }

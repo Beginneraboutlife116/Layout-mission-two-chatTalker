@@ -1,0 +1,22 @@
+@use '../abstract/mixins' as *;
+
+.info {
+  &__list {
+    @include above-1104px {
+      gap: var(--space-4);
+    }
+  }
+
+  &__item {
+    width: min(77.61%, 24rem);
+    gap: var(--space-4);
+
+    & > p {
+      padding: 0 var(--space-4) var(--space-6);
+    }
+
+    @include above-1104px {
+      width: min(20vw, 16.25rem);
+    }
+  }
+}
