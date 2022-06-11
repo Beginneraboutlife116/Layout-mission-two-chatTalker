@@ -1037,7 +1037,7 @@ a:where(:active, :visited, :link) {
   background-repeat: no-repeat;
   min-height: 70vh;
   display: grid;
-  margin-block-start: calc(var(--space) * 3.75);
+  margin-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
 }
 .footer__content {
   margin-block-start: auto;
@@ -1127,21 +1127,6 @@ a:where(:active, :visited, :link) {
   grid-auto-columns: 100%;
   scrollbar-color: transparent transparent;
 }
-@media (min-width: 69rem) {
-  .horizontal-scroller {
-    overflow-x: scroll;
-    overscroll-behavior-inline: contain;
-    scroll-padding-inline: var(--space-4);
-    scroll-snap-type: inline mandatory;
-  }
-}
-@media (min-width: 69rem) {
-  .horizontal-scroller__scroller {
-    width: 69.75rem;
-    scroll-snap-align: center;
-    margin-inline: auto;
-  }
-}
 .horizontal-scroller__list {
   display: grid;
   grid-auto-flow: column;
@@ -1152,17 +1137,6 @@ a:where(:active, :visited, :link) {
   scroll-padding-inline: var(--space-5);
   scroll-snap-type: inline mandatory;
   scrollbar-color: transparent transparent;
-}
-@media (min-width: 50rem) {
-  .horizontal-scroller__list {
-    grid-auto-columns: 50%;
-  }
-}
-@media (min-width: 69rem) {
-  .horizontal-scroller__list {
-    overflow-x: auto;
-    grid-auto-columns: 1fr;
-  }
 }
 .horizontal-scroller__item {
   width: clamp(20.9375rem, 44vw, 22rem);
@@ -1190,6 +1164,28 @@ a:where(:active, :visited, :link) {
   aspect-ratio: 1;
   background-color: var(--clr-others);
   cursor: pointer;
+}
+@media (min-width: 50rem) {
+  .horizontal-scroller__list {
+    grid-auto-columns: 50%;
+  }
+}
+@media (min-width: 69rem) {
+  .horizontal-scroller {
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: var(--space-4);
+    scroll-snap-type: inline mandatory;
+  }
+  .horizontal-scroller__scroller {
+    width: 69.75rem;
+    scroll-snap-align: center;
+    margin-inline: auto;
+  }
+  .horizontal-scroller__list {
+    overflow-x: auto;
+    grid-auto-columns: 1fr;
+  }
 }
 
 .select {

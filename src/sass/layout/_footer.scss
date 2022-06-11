@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   min-height: 70vh;
   display: grid;
-  margin-block-start: calc(var(--space) * 3.75);
+  margin-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
 
   &__content {
     margin-block-start: auto;
