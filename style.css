@@ -1125,7 +1125,7 @@ a:where(:active, :visited, :link) {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  padding-block-end: var(--space-6);
+  scrollbar-color: transparent transparent;
 }
 @media (min-width: 69rem) {
   .horizontal-scroller {
@@ -1136,7 +1136,7 @@ a:where(:active, :visited, :link) {
   }
 }
 @media (min-width: 69rem) {
-  .horizontal-scroller__bar {
+  .horizontal-scroller__scroller {
     width: 69.75rem;
     scroll-snap-align: center;
     margin-inline: auto;
@@ -1146,10 +1146,12 @@ a:where(:active, :visited, :link) {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
+  padding-block-end: var(--space-6);
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
   scroll-padding-inline: var(--space-5);
   scroll-snap-type: inline mandatory;
+  scrollbar-color: transparent transparent;
 }
 @media (min-width: 50rem) {
   .horizontal-scroller__list {
@@ -1174,6 +1176,25 @@ a:where(:active, :visited, :link) {
   .horizontal-scroller > *:not(:first-child) {
     display: inline-block;
   }
+}
+.horizontal-scroller__bar {
+  width: 4.375rem;
+  height: 0.625rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.horizontal-scroller__dot {
+  border-radius: 1rem;
+  width: 0.625rem;
+  aspect-ratio: 1;
+  background-color: var(--clr-others);
+  cursor: pointer;
+}
+
+.select {
+  width: 1rem;
+  background-color: var(--clr-scroll-bar);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  padding-block-end: var(--space-6);
+  scrollbar-color: transparent transparent;
 
   @include above-1104px {
     overflow-x: scroll;
@@ -14,8 +14,7 @@
     scroll-snap-type: inline mandatory;
   }
   
-
-  &__bar {
+  &__scroller {
     @include above-1104px {
       width: 69.75rem;
       scroll-snap-align: center;
@@ -27,12 +26,14 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
+    padding-block-end: var(--space-6);
     
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     
     scroll-padding-inline: var(--space-5);
     scroll-snap-type: inline mandatory;
+    scrollbar-color: transparent transparent;
     
     @include above-800px {
       grid-auto-columns: 50%;
@@ -57,4 +58,25 @@
       display: inline-block;
     }
   }
+
+  &__bar {
+    width: 4.375rem;
+    height: 0.625rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  &__dot {
+    border-radius: 1rem;
+    width: 0.625rem;
+    aspect-ratio: 1;
+    background-color: var(--clr-others);
+    cursor: pointer;
+  }
+}
+
+.select {
+  width: 1rem;
+  background-color: var(--clr-scroll-bar);
 }
