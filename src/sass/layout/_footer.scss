@@ -1,25 +1,60 @@
+@use '../abstract/mixins' as *;
+
 .footer {
-  background-image: url(/src/asset/img/index/bg-footer-mobile.png);
+  background-image: url(/src/asset/img/index/bg-footer.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 70vh;
   display: grid;
   margin-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 4.375rem;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  &::before {
+    background-image: url(/src/asset/img/index/img-dialogue-3.png);
+    top: 37.5%;
+    left: 1rem;
+  }
+
+  &::after {
+    background-image: url(/src/asset/img/index/img-dialogue-4.png);
+    top: 30%;
+    left: auto;
+    right: .75rem;
+  }
 
   &__content {
     margin-block-start: auto;
-    
-    & > h2 {
-      margin-block-end: var(--space-6);
-    }
-    & > a {
-      margin-block-end: calc(var(--space) * 3.75);
-    }
+  }
+
+  &__btn {
+    margin-block: clamp(var(--space-6), 3.5vw, var(--space-12)) clamp(3.75rem, 11.7vw, 6.25rem);
   }
 
   &__copyright {
     background-color: var(--clr-footer);
     padding-block: var(--space-4);
+  }
+
+  @include above-600px {
+    &::before,
+    &::after {
+      all: unset;
+    }
+  }
+
+  @include above-1104px {
+    background-size: contain;
   }
 }

@@ -1031,26 +1031,54 @@ a:where(:active, :visited, :link) {
 }
 
 .footer {
-  background-image: url(/src/asset/img/index/bg-footer-mobile.png);
+  background-image: url(/src/asset/img/index/bg-footer.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 70vh;
   display: grid;
   margin-block-start: clamp(3.75rem, 11.7vw, 6.25rem);
+  position: relative;
+}
+.footer::before, .footer::after {
+  content: "";
+  position: absolute;
+  width: 4.375rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+.footer::before {
+  background-image: url(/src/asset/img/index/img-dialogue-3.png);
+  top: 37.5%;
+  left: 1rem;
+}
+.footer::after {
+  background-image: url(/src/asset/img/index/img-dialogue-4.png);
+  top: 30%;
+  left: auto;
+  right: 0.75rem;
 }
 .footer__content {
   margin-block-start: auto;
 }
-.footer__content > h2 {
-  margin-block-end: var(--space-6);
-}
-.footer__content > a {
-  margin-block-end: calc(var(--space) * 3.75);
+.footer__btn {
+  margin-block: clamp(var(--space-6), 3.5vw, var(--space-12)) clamp(3.75rem, 11.7vw, 6.25rem);
 }
 .footer__copyright {
   background-color: var(--clr-footer);
   padding-block: var(--space-4);
+}
+@media (min-width: 37.5rem) {
+  .footer::before, .footer::after {
+    all: unset;
+  }
+}
+@media (min-width: 69rem) {
+  .footer {
+    background-size: contain;
+  }
 }
 
 .btn {
