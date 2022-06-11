@@ -29,7 +29,6 @@
       border-radius: 50%;
       top: 8.625rem;
       left: -0.875rem;
-      transition: top 500ms ease, left 500ms ease;
       
       @include above-800px {
         top: 0;

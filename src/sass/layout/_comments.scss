@@ -1,0 +1,43 @@
+@use '../abstract/mixins' as *;
+
+.comments {
+  &__title {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: min(40.8vw, 9.375rem);
+      aspect-ratio: 1;
+      background-color: #FBE8B1;
+      border-radius: 50%;
+      top: 100%;
+      left: 0;
+      transform: translateX(-50%);
+
+      @include above-800px {
+        transform: translateX(calc(50 / 150 * 100%));
+      }
+    }
+  }
+  
+  &__card {
+    margin-top: 3.5rem;
+    position: relative;
+    padding: var(--space-12) var(--space-4) var(--space-4);
+    text-align: left;
+
+    & > p {
+      padding-block: var(--space-2) var(--space-4);
+      border-bottom: 1px solid var(--clr-others);
+    }
+
+    & > h3 {
+      margin-block: var(--space-4) var(--space-1);
+    }
+  }
+
+  &__list {
+    margin-block-start: clamp(var(--space-8), 6vw, var(--space-12));
+  }
+}

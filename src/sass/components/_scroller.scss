@@ -1,18 +1,60 @@
+@use '../abstract/mixins' as *;
+
 .horizontal-scroller {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  padding-inline: var(--space-5);
   padding-block-end: var(--space-6);
-  gap: var(--space-5);
-  
-  overflow-x: scroll;
-  overscroll-behavior-inline: contain;
 
-  scroll-padding-inline: var(--space-5);
-  scroll-snap-type: inline mandatory;
+  @include above-1104px {
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+  
+    scroll-padding-inline: var(--space-4);
+    scroll-snap-type: inline mandatory;
+  }
+  
+
+  &__bar {
+    @include above-1104px {
+      width: 69.75rem;
+      scroll-snap-align: center;
+      margin-inline: auto;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    
+    scroll-padding-inline: var(--space-5);
+    scroll-snap-type: inline mandatory;
+    
+    @include above-800px {
+      grid-auto-columns: 50%;
+    }
+    
+    @include above-1104px {
+      overflow-x: auto;
+      grid-auto-columns: 1fr;
+    }
+  }
 
   &__item {
-    scroll-snap-align: start;
+    width: clamp(20.9375rem, 44vw, 22rem);
+    margin-inline: auto;
+    scroll-snap-align: center;
+  }
+
+  & > *:not(:first-child) {
+    display: none;
+
+    @include above-1104px {
+      display: inline-block;
+    }
   }
 }
