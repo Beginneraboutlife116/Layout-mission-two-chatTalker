@@ -75,7 +75,7 @@
   }
 }
 
-.select {
+[data-select='true'] {
   width: 1rem;
   background-color: var(--clr-scroll-bar);
 }

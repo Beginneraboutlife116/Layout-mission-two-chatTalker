@@ -12,9 +12,10 @@
       rel="stylesheet"
     />
     <title>homepage - chatTalker</title>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <button class="btn btn_back-top" aria-label="Back to top">
+    <button class="btn btn_back-top" data-back-to-top aria-label="Back to top">
       <svg id="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 71">
         <circle
           id="Ellipse_9"
@@ -301,7 +302,7 @@
       <h2 class="comments__title">好評如潮</h2>
       <ul class="horizontal-scroller comments__list">
         <li class="horizontal-scroller__scroller">
-          <ul class="horizontal-scroller__list">
+          <ul data-scroller  class="horizontal-scroller__list">
             <li class="card horizontal-scroller__item comments__card">
               <img
                 class="card__avatar"
@@ -1350,10 +1351,10 @@
         </li>
       </ul>
       <div class="horizontal-scroller__bar">
-        <div class="horizontal-scroller__dot"></div>
-        <div class="horizontal-scroller__dot"></div>
-        <div class="horizontal-scroller__dot"></div>
-        <div class="horizontal-scroller__dot"></div>
+        <div class="horizontal-scroller__dot" data-select="true"></div>
+        <div class="horizontal-scroller__dot" data-select="false"></div>
+        <div class="horizontal-scroller__dot" data-select="false"></div>
+        <div class="horizontal-scroller__dot" data-select="false"></div>
       </div>
     </section>
     <footer class="footer">
