@@ -812,7 +812,7 @@ a:where(:active, :visited, :link) {
   }
 }
 .container__circles-style::after {
-  background-image: url(/src/asset/img/index/ball-02.svg);
+  background-image: url(/src/asset/img/index/ball.svg);
   width: clamp(5.5rem, 19vw, 13.125rem);
   aspect-ratio: 88/135;
   background-position: left;
@@ -1050,12 +1050,12 @@ a:where(:active, :visited, :link) {
   background-size: cover;
 }
 .footer::before {
-  background-image: url(/src/asset/img/index/img-dialogue-3.png);
+  background-image: url(/src/asset/img/index/img-dialogue-1.png);
   top: 37.5%;
   left: 1rem;
 }
 .footer::after {
-  background-image: url(/src/asset/img/index/img-dialogue-4.png);
+  background-image: url(/src/asset/img/index/img-dialogue-2.png);
   top: 30%;
   left: auto;
   right: 0.75rem;
