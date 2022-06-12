@@ -866,14 +866,14 @@ input[type=radio] {
 }
 .header__img-wrapper {
   margin-block-end: max(var(--space-8), 8.5vmin);
-  background-image: url(/src/asset/img/index/bg-yellow-mobile.svg);
+  background-image: url(src/asset/img/index/bg-yellow-mobile.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
 }
 @media (min-width: 50rem) {
   .header {
-    background-image: url(/src/asset/img/index/bg-yellow.png);
+    background-image: url(src/asset/img/index/bg-yellow.png);
     background-repeat: no-repeat;
     background-size: 62% 100%;
     background-position: right;
