@@ -816,7 +816,7 @@ input[type=radio] {
   }
 }
 .container__circles-style::after {
-  background-image: url(src/asset/img/index/ball.svg);
+  background-image: url(./src/asset/img/index/ball.svg);
   width: clamp(5.5rem, 19vw, 13.125rem);
   aspect-ratio: 88/135;
   background-position: left;
@@ -866,14 +866,14 @@ input[type=radio] {
 }
 .header__img-wrapper {
   margin-block-end: max(var(--space-8), 8.5vmin);
-  background-image: url(src/asset/img/index/bg-yellow-mobile.svg);
+  background-image: url(./src/asset/img/index/bg-yellow-mobile.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
 }
 @media (min-width: 50rem) {
   .header {
-    background-image: url(src/asset/img/index/bg-yellow.png);
+    background-image: url(./src/asset/img/index/bg-yellow.png);
     background-repeat: no-repeat;
     background-size: 62% 100%;
     background-position: right;
@@ -1035,7 +1035,7 @@ input[type=radio] {
 }
 
 .footer {
-  background-image: url(src/asset/img/index/bg-footer.png);
+  background-image: url(./src/asset/img/index/bg-footer.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1054,12 +1054,12 @@ input[type=radio] {
   background-size: cover;
 }
 .footer::before {
-  background-image: url(src/asset/img/index/img-dialogue-1.png);
+  background-image: url(./src/asset/img/index/img-dialogue-1.png);
   top: 37.5%;
   left: 1rem;
 }
 .footer::after {
-  background-image: url(src/asset/img/index/img-dialogue-2.png);
+  background-image: url(./src/asset/img/index/img-dialogue-2.png);
   top: 30%;
   left: auto;
   right: 0.75rem;
@@ -1232,7 +1232,7 @@ input[type=radio] {
 .plan__header-content {
   padding-block: var(--space-12) 22.5rem;
   text-align: left;
-  background-image: url(src/asset/img/plan/img-plan.svg);
+  background-image: url(./src/asset/img/plan/img-plan.svg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
