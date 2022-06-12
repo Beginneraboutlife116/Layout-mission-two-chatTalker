@@ -50,3 +50,7 @@ a {
 a:where(:active, :visited, :link) {
   color: inherit;
 }
+
+input[type="radio"] {
+  display: none;
+}

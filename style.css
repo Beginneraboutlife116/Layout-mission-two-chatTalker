@@ -139,6 +139,10 @@ a:where(:active, :visited, :link) {
   color: inherit;
 }
 
+input[type=radio] {
+  display: none;
+}
+
 .text {
   font-size: 1.125rem;
 }
