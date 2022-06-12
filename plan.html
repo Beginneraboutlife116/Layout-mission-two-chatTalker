@@ -12,9 +12,10 @@
       rel="stylesheet"
     />
     <title>plan project - chatTalker</title>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <button class="btn btn__back-top" aria-label="Back to top">
+    <button class="btn btn_back-top" data-back-to-top aria-label="Back to top">
       <svg
         id="top"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,22 +42,22 @@
       </svg>
     </button>
     <header class="header">
-      <div class="header__header">
-        <img
-          src="./src/asset/img/logo.png"
-          alt="chatTalker logo"
-          class="logo"
-        />
-        <a href="#" class="btn btn_red btn_disabled">方案費用</a>
+      <div class="header_border_bottom">
+        <div class="header__header container">
+          <img
+            src="./src/asset/img/logo.png"
+            alt="chatTalker logo"
+            class="header__logo"
+          />
+          <a href="#" class="btn header__btn text_clr_white btn_disabled">方案費用</a>
+        </div>
       </div>
-      <section class="header__content">
-        <h1>計費方式說明</h1>
-        <p>聊天機器人幫你實現增粉、轉單、客服等目標</p>
-        <img
-          src="./src/asset/img/plan/bg-mobile.svg"
-          alt="announcement image"
-        />
-      </section>
+      <div class="plan__header-content">
+        <section class="container">
+          <h1 class="text_8">計費方式說明</h1>
+          <p>聊天機器人幫你實現增粉、轉單、客服等目標</p>
+        </section>
+      </div>
     </header>
     <main>
       <h2>彈性選擇，提供您選擇最適合的方案</h2>

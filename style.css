@@ -1225,4 +1225,24 @@ a:where(:active, :visited, :link) {
   background-color: var(--clr-scroll-bar);
 }
 
+.plan__header-content {
+  padding-block: var(--space-12) 22.5rem;
+  text-align: left;
+  background-image: url(/src/asset/img/plan/img-plan.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.plan__header-content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-plan-header);
+  z-index: -1;
+  border-radius: 0 0 0 9.375rem;
+}
+
 /*# sourceMappingURL=style.css.map */
