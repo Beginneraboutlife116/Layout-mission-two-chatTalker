@@ -9,18 +9,6 @@
       padding-#{$val}: var(--space-#{$i});
     }
   }
-  // .m#{$key}_5 {
-  //   margin-#{$val}: calc(var(--space) * 3.75);
-  // }
-  // .m#{$key}_6 {
-  //   margin-#{$val}: calc(var(--space) * 6.25);
-  // }
-  // .p#{$key}_5 {
-  //   padding-#{$val}: calc(var(--space) * 3.75);
-  // }
-  // .p#{$key}_6 {
-  //   padding-#{$val}: calc(var(--space) * 6.25);
-  // }
 }
 
 .pt_60to100 {
