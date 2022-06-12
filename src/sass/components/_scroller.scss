@@ -18,6 +18,7 @@
     scroll-padding-inline: var(--space-5);
     scroll-snap-type: inline mandatory;
     scrollbar-color: transparent transparent;
+
   }
 
   &__item {
@@ -54,6 +55,10 @@
     &__list {
       grid-auto-columns: 50%;
     }
+
+    &__item {
+      scroll-snap-align: start;
+    }
   }
 
   @include above-1104px {
@@ -71,6 +76,14 @@
     &__list {
       overflow-x: auto;
       grid-auto-columns: 1fr;
+
+    }
+    &__item {
+      scroll-snap-align: center;
+
+      &:nth-of-type(4) {
+        display: none;
+      }
     }
   }
 }

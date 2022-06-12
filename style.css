@@ -1075,11 +1075,6 @@ a:where(:active, :visited, :link) {
     all: unset;
   }
 }
-@media (min-width: 69rem) {
-  .footer {
-    background-size: contain;
-  }
-}
 
 .btn {
   border-radius: 99em;
@@ -1197,6 +1192,9 @@ a:where(:active, :visited, :link) {
   .horizontal-scroller__list {
     grid-auto-columns: 50%;
   }
+  .horizontal-scroller__item {
+    scroll-snap-align: start;
+  }
 }
 @media (min-width: 69rem) {
   .horizontal-scroller {
@@ -1213,6 +1211,12 @@ a:where(:active, :visited, :link) {
   .horizontal-scroller__list {
     overflow-x: auto;
     grid-auto-columns: 1fr;
+  }
+  .horizontal-scroller__item {
+    scroll-snap-align: center;
+  }
+  .horizontal-scroller__item:nth-of-type(4) {
+    display: none;
   }
 }
 

@@ -53,8 +53,4 @@
       all: unset;
     }
   }
-
-  @include above-1104px {
-    background-size: contain;
-  }
 }
