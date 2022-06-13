@@ -2,6 +2,7 @@
 
 .info {
   &__list {
+    gap: var(--space-6);
     @include above-1104px {
       gap: var(--space-4);
     }

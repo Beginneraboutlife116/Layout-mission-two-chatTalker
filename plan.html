@@ -12,7 +12,6 @@
       rel="stylesheet"
     />
     <title>plan project - chatTalker</title>
-    <script src="main.js" defer></script>
   </head>
   <body>
     <button class="btn btn_back-top" data-back-to-top aria-label="Back to top">
@@ -60,103 +59,107 @@
       </div>
     </header>
     <main class="pt_60to100 container">
-      <h2 class="text_7">彈性選擇，提供您選擇最適合的方案</h2>
+      <h2 class="text_7 mb_4">彈性選擇，提供您選擇最適合的方案</h2>
       <form>
-        <ul>
-          <li class="btn btn_primary">
-            <input type="radio" id="10000" name="amount" /><label for="10000"
+        <ul class="list plan__list mb_8">
+          <li>
+            <input type="radio" id="10000" name="amount" /><label class="btn btn_plan" for="10000"
               >10000位</label
             >
           </li>
-          <li class="btn btn_primary">
-            <input type="radio" id="15000" name="amount" /><label for="15000"
+          <li>
+            <input type="radio" id="15000" name="amount" /><label class="btn btn_plan" for="15000"
               >15000位</label
             >
           </li>
-          <li class="btn btn_primary">
-            <input type="radio" id="20000" name="amount" /><label for="20000"
+          <li>
+            <input type="radio" id="20000" name="amount" /><label class="btn btn_plan" for="20000"
               >20000位</label
             >
           </li>
-          <li class="btn btn_primary">
-            <input type="radio" id="25000" name="amount" /><label for="25000"
+          <li>
+            <input type="radio" id="25000" name="amount" /><label class="btn btn_plan" for="25000"
               >25000位</label
             >
           </li>
-          <li class="btn btn_primary">
-            <input type="radio" id=">25000" name="amount" /><label for=">25000"
+          <li>
+            <input type="radio" id=">25000" name="amount" /><label class="btn btn_plan" for=">25000"
               >>25000位</label
             >
           </li>
         </ul>
-        <ul>
-          <li>
-            <h3>基本版</h3>
-            <p>提供中小企業最必要的功能完整建立分眾以達到精準的行銷自動化</p>
-            <div>
-              <div>
-                <p>訂閱用戶數</p>
-                <p>10000 <sub>位</sub></p>
+        <ul class="plan__card-list">
+          <li class="card plan__card">
+            <h3 class="text_6 mb_4">基本版</h3>
+            <div class="plan__description">
+              <p>提供中小企業最必要的功能<br>完整建立分眾以達到精準的行銷自動化</p>
+              <div class="spreadsheet">
+                <div class="spreadsheet__panel">
+                  <p class="text_3">訂閱用戶數</p>
+                  <p class="text_7 text_clr_primary">10000 <sub class="text_3">位</sub></p>
+                </div>
+                <p class="text_6">=</p>
+                <div class="spreadsheet__panel">
+                  <p class="text_3">試算每月的費用</p>
+                  <p class="text_7">600 <sub class="text_3">TWD</sub></p>
+                </div>
               </div>
-              <div>=</div>
-              <div>
-                <p>試算每月的費用</p>
-                <p>600 <sub>TWD</sub></p>
-              </div>
+              <ul>
+                <li>
+                  <i></i>
+                  <p>支援 Messenger / Instagram 或 LINE 渠道</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>10 個進階套件</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>可設定 50 種分眾標籤</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>客服人機轉接</p>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <i></i>
-                <p>支援 Messenger / Instagram 或 LINE 渠道</p>
-              </li>
-              <li>
-                <i></i>
-                <p>10 個進階套件</p>
-              </li>
-              <li>
-                <i></i>
-                <p>可設定 50 種分眾標籤</p>
-              </li>
-              <li>
-                <i></i>
-                <p>客服人機轉接</p>
-              </li>
-            </ul>
-            <button type="submit">立即體驗</button>
+            <button class="btn btn_primary text_clr_white" type="submit">立即體驗</button>
           </li>
-          <li>
-            <h3>標準版</h3>
-            <p>建立企業流量池，全通路數據整合與交換高可靠性服務</p>
-            <div>
-              <div>
-                <p>訂閱用戶數</p>
-                <p>10000 <sub>位</sub></p>
+          <li class="card plan__card">
+            <h3 class="text_6 mb_4">標準版</h3>
+            <div class="plan__description">
+              <p>建立企業流量池，全通路數據整合與交換<br>高可靠性服務</p>
+              <div class="spreadsheet">
+                <div class="spreadsheet__panel">
+                  <p class="text_3">訂閱用戶數</p>
+                  <p class="text_7 text_clr_primary">10000 <sub class="text_3">位</sub></p>
+                </div>
+                <p class="text_6">=</p>
+                <div class="spreadsheet__panel">
+                  <p class="text_3">試算每月的費用</p>
+                  <p class="text_7">1600 <sub class="text_3">TWD</sub></p>
+                </div>
               </div>
-              <div>=</div>
-              <div>
-                <p>試算每月的費用</p>
-                <p>1600 <sub>TWD</sub></p>
-              </div>
+              <ul>
+                <li>
+                  <i></i>
+                  <p>支援多個 Messenger、Instagram 和 LINE 渠道</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>20 個進階及行銷互動套件</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>可設定 500 種分眾標籤</p>
+                </li>
+                <li>
+                  <i></i>
+                  <p>客服人機轉接＋自動指派專員處理</p>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <i></i>
-                <p>支援多個 Messenger、Instagram 和 LINE 渠道</p>
-              </li>
-              <li>
-                <i></i>
-                <p>20 個進階及行銷互動套件</p>
-              </li>
-              <li>
-                <i></i>
-                <p>可設定 500 種分眾標籤</p>
-              </li>
-              <li>
-                <i></i>
-                <p>客服人機轉接＋自動指派專員處理</p>
-              </li>
-            </ul>
-            <button type="submit">立即體驗</button>
+            <button class="btn btn_primary text_clr_white" type="submit">立即體驗</button>
           </li>
         </ul>
       </form>

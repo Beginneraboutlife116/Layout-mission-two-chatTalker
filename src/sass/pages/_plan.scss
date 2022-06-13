@@ -19,4 +19,38 @@
       border-radius: 0 0 0 9.375rem;
     }
   }
+
+  &__list {
+    gap: clamp(0.375rem, 1.5vw, var(--space-4));
+  }
+
+  &__card {
+    padding-block: var(--space-4) var(--space-6);
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+  }
+
+  &__description {
+    padding-block: var(--space-6) var(--space-9);
+    padding-inline: var(--space-4);
+    border-top: 1px solid var(--clr-others);
+  }
+}
+
+.spreadsheet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+
+  &__panel {
+    width: 45.87%;
+    padding-block: var(--space-4);
+    border-radius: 12px;
+    background-color: var(--clr-footer);
+  }
 }

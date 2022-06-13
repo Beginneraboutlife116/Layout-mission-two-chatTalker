@@ -2,6 +2,7 @@
   border-radius: 99em;
   display: inline-block;
   line-height: 1;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.75;
@@ -20,5 +21,17 @@
     background-color: var(--clr-primary);
     font-size: 1.125rem;
     padding: var(--space-4) var(--space-8);
+  }
+
+  &_plan {
+    border: 1px solid var(--clr-primary);
+    font-size: var(--fz-4);
+    padding: var(--space-4);
+    color: var(--clr-primary);
+
+    &:hover {
+      background-color: var(--clr-primary);
+      color: white;
+    }
   }
 }
