@@ -1106,8 +1106,8 @@ input[type=radio] {
 }
 .btn_plan {
   border: 1px solid var(--clr-primary);
-  font-size: var(--fz-4);
-  padding: var(--space-4);
+  font-size: clamp(var(--fz-4), 4vw, 1.125rem);
+  padding: var(--space-4) clamp(var(--space-4), 4vw, var(--space-8));
   color: var(--clr-primary);
 }
 .btn_plan:hover {
@@ -1275,6 +1275,29 @@ input[type=radio] {
 .plan__header-title {
   font-size: clamp(var(--fz-8), 8.5vw, var(--fz-12));
 }
+.plan__main-title {
+  font-size: clamp(var(--fz-7), 7.4vw, var(--fz-8));
+}
+.plan__list {
+  gap: clamp(0.375rem, 1.5vw, var(--space-4));
+}
+.plan__card {
+  width: min(100%, 27.75rem);
+  padding-block: clamp(var(--space-4), 4vw, var(--space-6)) clamp(var(--space-6), 6.4vw, var(--space-8));
+  align-items: center;
+}
+.plan__card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+.plan__description {
+  width: 100%;
+  padding-block: var(--space-6) var(--space-9);
+  padding-inline: var(--space-4);
+  border-top: 1px solid var(--clr-others);
+}
 @media (min-width: 50rem) {
   .plan__header {
     position: relative;
@@ -1291,41 +1314,36 @@ input[type=radio] {
     border-radius: 0 0 0 18.75rem;
     height: 80%;
   }
-}
-.plan__list {
-  gap: clamp(0.375rem, 1.5vw, var(--space-4));
-}
-.plan__card {
-  padding-block: var(--space-4) var(--space-6);
-  align-items: center;
-}
-.plan__card-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-.plan__description {
-  padding-block: var(--space-6) var(--space-9);
-  padding-inline: var(--space-4);
-  border-top: 1px solid var(--clr-others);
+  .plan__card {
+    width: min(48.84%, 27.75rem);
+  }
+  .plan__card-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-5);
+  }
 }
 
 .spreadsheet {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 0.375rem;
-  margin-block: var(--space-6) var(--space-7);
+  flex-wrap: wrap;
+  margin-block-start: clamp(var(--space-6), 6.4vw, var(--space-8));
 }
 .spreadsheet__panel {
-  width: 45.87%;
-  padding-block: var(--space-4);
+  width: min(45.87%, 10.5625rem);
+  padding-block: clamp(var(--space-4), 4vw, var(--space-6));
   border-radius: 12px;
   background-color: var(--clr-footer);
 }
+@media (min-width: 50rem) {
+  .spreadsheet {
+    justify-content: space-between;
+  }
+}
 
 .feature {
-  display: block;
   text-align: left;
   padding-inline-start: 2rem;
   background-image: url(./src/asset/img/plan/ic-checkmark.svg);
@@ -1334,8 +1352,11 @@ input[type=radio] {
   background-position: left center;
   font-size: 0.875rem;
 }
-.feature + * {
-  margin-block-start: var(--space-4);
+.features {
+  margin-block-start: clamp(var(--space-7), 7.4vw, var(--space-8));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .qa[open] {
