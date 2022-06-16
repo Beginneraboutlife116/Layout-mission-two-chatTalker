@@ -1,0 +1,1 @@
+export const backToTop = document.querySelector('[data-back-to-top]').addEventListener('click', () => window.scrollTo(top))
