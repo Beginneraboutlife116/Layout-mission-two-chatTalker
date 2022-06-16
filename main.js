@@ -24,8 +24,7 @@ window.addEventListener('resize', (event) => {
 })
 
 //* click 'TOP' button
-const backToTop = document.querySelector('[data-back-to-top]')
-backToTop.addEventListener('click', () => window.scrollTo(top))
+import './src/module/backToTop.js'
 
 //* scroll mechanism
 let currentScrollNumber = 0

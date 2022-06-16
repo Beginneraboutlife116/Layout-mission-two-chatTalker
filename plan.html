@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <title>plan project - chatTalker</title>
+    <script type="module" src="plan.js" defer></script>
   </head>
   <body>
     <button class="btn btn_back-top" data-back-to-top aria-label="Back to top">
@@ -62,39 +63,30 @@
         <form>
           <ul class="list plan__list">
             <li>
-              <input type="radio" id="10000" name="amount" /><label
-                class="btn btn_plan"
-                for="10000"
-                >10000位</label
-              >
+              <input
+                type="radio"
+                id="10000"
+                value="10000"
+                name="amount"
+                checked
+              />
+              <label class="btn btn_plan" for="10000">10000位</label>
             </li>
             <li>
-              <input type="radio" id="15000" name="amount" /><label
-                class="btn btn_plan"
-                for="15000"
-                >15000位</label
-              >
+              <input type="radio" id="15000" value="15000" name="amount" />
+              <label class="btn btn_plan" for="15000">15000位</label>
             </li>
             <li>
-              <input type="radio" id="20000" name="amount" /><label
-                class="btn btn_plan"
-                for="20000"
-                >20000位</label
-              >
+              <input type="radio" id="20000" value="20000" name="amount" />
+              <label class="btn btn_plan" for="20000">20000位</label>
             </li>
             <li>
-              <input type="radio" id="25000" name="amount" /><label
-                class="btn btn_plan"
-                for="25000"
-                >25000位</label
-              >
+              <input type="radio" id="25000" value="25000" name="amount" />
+              <label class="btn btn_plan" for="25000">25000位</label>
             </li>
             <li>
-              <input type="radio" id=">25000" name="amount" /><label
-                class="btn btn_plan"
-                for=">25000"
-                >>25000位</label
-              >
+              <input type="radio" id=">25000" value=">25000" name="amount" />
+              <label class="btn btn_plan" for=">25000">>25000位</label>
             </li>
           </ul>
           <ul class="plan__card-list mt_32to48">
@@ -107,14 +99,16 @@
                 <div class="spreadsheet">
                   <div class="spreadsheet__panel">
                     <p class="text_3">訂閱用戶數</p>
-                    <p class="text_7 text_clr_primary">
+                    <p class="text_7 text_clr_primary" data-people>
                       10000 <sub class="text_3">位</sub>
                     </p>
                   </div>
                   <p class="text_6">=</p>
                   <div class="spreadsheet__panel">
                     <p class="text_3">試算每月的費用</p>
-                    <p class="text_7">600 <sub class="text_3">TWD</sub></p>
+                    <p class="text_7" data-price="basic">
+                      600 <sub class="text_3">TWD</sub>
+                    </p>
                   </div>
                   <ul class="features">
                     <li class="feature">
@@ -146,14 +140,16 @@
                 <div class="spreadsheet">
                   <div class="spreadsheet__panel">
                     <p class="text_3">訂閱用戶數</p>
-                    <p class="text_7 text_clr_primary">
+                    <p class="text_7 text_clr_primary" data-people>
                       10000 <sub class="text_3">位</sub>
                     </p>
                   </div>
                   <p class="text_6">=</p>
                   <div class="spreadsheet__panel">
                     <p class="text_3">試算每月的費用</p>
-                    <p class="text_7">1600 <sub class="text_3">TWD</sub></p>
+                    <p class="text_7" data-price="standard">
+                      1600 <sub class="text_3">TWD</sub>
+                    </p>
                   </div>
                   <ul class="features">
                     <li class="feature">
@@ -203,7 +199,7 @@
           <details class="qa">
             <summary class="qa__icon">非上班日有客服支援嗎？</summary>
             <p>
-              當然哦！我們錢都收了，不會拋棄你的！<br>
+              當然哦！我們錢都收了，不會拋棄你的！<br />
               請您直接來我們公司，我們假日也都在辦公室。
             </p>
           </details>
