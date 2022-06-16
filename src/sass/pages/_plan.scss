@@ -172,3 +172,8 @@
     }
   }
 }
+
+input[name="amount"]:checked + .btn_plan {
+  background-color: var(--clr-primary);
+  color: white;
+}

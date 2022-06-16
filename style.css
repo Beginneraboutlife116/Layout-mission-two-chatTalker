@@ -1405,4 +1405,9 @@ input[type=radio] {
   transition: transform 0.2s linear;
 }
 
+input[name=amount]:checked + .btn_plan {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
