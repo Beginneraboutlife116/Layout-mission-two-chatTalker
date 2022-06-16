@@ -1417,9 +1417,9 @@ input[type=radio] {
 .qa__icon::after {
   width: 2px;
   height: 1rem;
-  top: 0.25rem;
+  top: 50%;
   right: 0.375rem;
-  transform: translateX(-50%) rotate(-180deg);
+  transform: translate(-50%, -50%);
   transition: transform 0.2s linear;
 }
 
