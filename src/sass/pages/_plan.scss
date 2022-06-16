@@ -60,7 +60,7 @@
   @include above-800px {
     &__header {
       position: relative;
-      background-image: url(/src/asset/img/plan/img-plan-large.svg);
+      background-image: url(./src/asset/img/plan/img-plan-large.svg);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right;
@@ -128,7 +128,7 @@
     color: var(--clr-primary);;
 
     & > p {
-      color: var(--clr-font);
+      color: var(--clr-font-gray);
       padding-block: var(--space-4) var(--space-2);
     }
 
@@ -144,6 +144,7 @@
   &__icon {
     display: block;
     position: relative;
+    cursor: pointer;
 
     &::before,
     &::after {

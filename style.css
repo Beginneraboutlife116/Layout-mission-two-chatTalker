@@ -1145,11 +1145,18 @@ input[type=radio] {
   padding-inline-end: var(--space-4);
 }
 .card__plan-qa {
-  padding: var(--space-4);
+  max-width: 56.5rem;
+  margin-inline: auto;
+  padding: var(--space-4) clamp(var(--space-4), 4vw, var(--space-8));
   text-align: left;
 }
 .card__plan-qa:not(:last-child) {
   margin-block-end: var(--space-4);
+}
+@media (min-width: 50rem) {
+  .card__plan-qa {
+    font-size: 1.125rem;
+  }
 }
 
 .icon {
@@ -1301,7 +1308,7 @@ input[type=radio] {
 @media (min-width: 50rem) {
   .plan__header {
     position: relative;
-    background-image: url(/src/asset/img/plan/img-plan-large.svg);
+    background-image: url(./src/asset/img/plan/img-plan-large.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -1363,7 +1370,7 @@ input[type=radio] {
   color: var(--clr-primary);
 }
 .qa[open] > p {
-  color: var(--clr-font);
+  color: var(--clr-font-gray);
   padding-block: var(--space-4) var(--space-2);
 }
 .qa[open] .qa__icon::after {
@@ -1375,6 +1382,7 @@ input[type=radio] {
 .qa__icon {
   display: block;
   position: relative;
+  cursor: pointer;
 }
 .qa__icon::before, .qa__icon::after {
   content: "";

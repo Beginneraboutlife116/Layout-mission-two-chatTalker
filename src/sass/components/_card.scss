@@ -22,10 +22,15 @@
   }
 
   &__plan-qa {
-    padding: var(--space-4);
+    max-width: 56.5rem;
+    margin-inline: auto;
+    padding: var(--space-4) clamp(var(--space-4), 4vw, var(--space-8));
     text-align: left;
     &:not(:last-child) {
       margin-block-end: var(--space-4);
+    }
+    @include above-800px {
+      font-size: 1.125rem;
     }
   }
 }
