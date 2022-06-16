@@ -1,22 +1,49 @@
-.plan {
-  &__header-content {
-    padding-block: var(--space-12) 22.5rem;
-    text-align: left;
-    background-image: url(./src/asset/img/plan/img-plan.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+@use '../abstract/mixins' as *;
 
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: var(--clr-plan-header);
-      z-index: -1;
-      border-radius: 0 0 0 9.375rem;
+.plan {
+  &__header {
+    &-content {
+      padding-block: var(--space-12) 22.5rem;
+      text-align: left;
+      background-image: url(./src/asset/img/plan/img-plan.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right bottom;
+      position: relative;
+    
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--clr-plan-header);
+        z-index: -1;
+        border-radius: 0 0 0 9.375rem;
+      }
+    }
+
+    &-title {
+      font-size: clamp(var(--fz-8), 8.5vw, var(--fz-12));
+    }
+
+    @include above-800px {
+      position: relative;
+      background-image: url(/src/asset/img/plan/img-plan-large.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+      
+      &-content {
+        background-image: none;
+        position: static;
+
+        &::after {
+          border-radius: 0 0 0 18.75rem;
+          height: 80%;
+        }
+      }
     }
   }
 
